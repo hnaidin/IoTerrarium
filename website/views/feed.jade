@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		if (!user)
+			h1 Temperature
+			p.lead Sorry, don't know you. Login first
+			a(href="/login") Login
+		if (user)
+			h1 Feed turtles
+			br
+			Data : #{data} 
+			br
+			Error : #{error}
+			h4= info

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	.container
+		if (!user)
+			h1 You're currently not logged in
+			a(href="/login") Login
+			br
+		if (user)
+			h1 Welcome back, #{user.username}!
+
+			a(href="/logout") Logout
+			p
+			a(href="/temp") 
+				button.btn.btn-primary(type="button")  See temperature stats
+			a(href="/feed") 
+				button.btn.btn-primary(type="button")  See feed stats
+			a(href="/register") 
+				button.btn.btn-primary(type="button")  Register another user
+
