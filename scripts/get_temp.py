@@ -1,25 +1,8 @@
 #/usr/bin/python
 import sys
-import serial
 import argparse
-
-class TemperatureGetter:
-    def __init__(self):
-    	ser = serial.Serial('/dev/ttyACM0' , 9600)
-    def getTemp():
-        ser.write("0")
-        while not str:
-            str = ser.readline()
-        print str
-	ser.close()
-	return str
-
-class TurtleFeeder:
-    def __init__(self):    
-	ser = serial.Serial('/dev/ttyACM0' , 9600)
-    def feed():
-        ser.write("1")
-	ser.close()
+import TurtleFeeder
+import TemperatureGetter
 
 def main(argv):
     parser = argparse.ArgumentParser(description='Terrarium control script')
