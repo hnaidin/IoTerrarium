@@ -1,7 +1,8 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 import logging
 import time
-from get_temp import TemperatureGetter, TurtleFeeder
+#import TemperatureGetter
+import TurtleFeeder
 from pymongo import MongoClient
 
 logging.basicConfig()
