@@ -32,7 +32,7 @@ void loop() {
                     break;
                   case FEED_TURTLES:
                     Serial.println("Feeding turtles... ");
-                    myservo.write(180);
+                    myservo.write(150);
                     delay(2000);
                     myservo.write(0);
                     delay(2000);
